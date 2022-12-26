@@ -40,10 +40,10 @@ git log
 - git은 상위폴더에 init했다면 하위폴더에 init하지 말자
 - `git add (파일명)` 후  `git commit -m 커밋사유` 로 저장.
 # git hub 연동
-- git remote add origin {remote repo} 
+- `git remote add origin {remote repo} `
   - 내 로컬 저장소 & 원격 저장소 연결
-- git push -u origin master <-user option 기억 ('-u option')>
-- 이후 git push만 해도 가능 , 
+-`git push -u origin master` <-user option 기억 ('-u option')>
+- 이후 `git push`만 해도 가능 , 
 ## 주의사항 
 - 드래그 앤 드랍으로도 파일을 올릴 수는 있지만 다양한 오류
 -상기 사유로 가능하면 git push로 진행
