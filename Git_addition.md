@@ -128,21 +128,21 @@ git switch -c {branch name}
 - Feature Branch Workflow
   - Shared repository model
   - (원격 저장소의 소유권이 있는 경우)
-   1. 각 사용자는 원격 저장소의 소유권을 가진 상태, 따라서 clone을 통해 저장소를 로컬에 복제
-       - GitHub Collaboator
-   2. 기능 추가를 위해 branch 생성 및 기능 구현
-       - master에 다시 push하지 않음
-   3. 기능 구현 후 원격 저장소에 브랜치 반영
-       - branch에 head가 있는 상태로 push
-      - branch가 누적 
-   4. Pull request
-       - merge request
-   5. Request merge
-       - branch 병합
-      - branch 삭제
-   6. 병합된 master의 내용을 pull
-       - 최신 commit을 받아옴
-       - 원격 저장소에 있던 branch 삭제
+  1. 각 사용자는 원격 저장소의 소유권을 가진 상태, 따라서 clone을 통해 저장소를 로컬에 복제
+    - GitHub Collaboator
+  2. 기능 추가를 위해 branch 생성 및 기능 구현
+    - master에 다시 push하지 않음
+  3. 기능 구현 후 원격 저장소에 브랜치 반영
+    - branch에 head가 있는 상태로 push
+    - branch가 누적 
+  4. Pull request
+     - merge request
+  5. Request merge
+     - branch 병합
+     - branch 삭제
+  6. 병합된 master의 내용을 pull
+     - 최신 commit을 받아옴
+     - 원격 저장소에 있던 branch 삭제
 - Forking Workflow
   - Fork & Pull model
   - (원격 저장소의 소유권이 없는 경우)
@@ -154,10 +154,15 @@ git switch -c {branch name}
   -   ```bash
       git remote add upstream{원본 URL}
       ```
-    - 원본+복제= 총 두개씩
-  2. 기능 추가를 위해 branch 생성 및 기능 구현
-  3. 내 복제 원격 저장소에 branch  push
-  4. 원본 저장소에 pull request 요청
-  5. 복제 원격 저장소의 branch 삭제
-  6. 로컬 master branch로 이동
-  7. 원본 저장소 pull 해서 로컬 저장소 동기화.
+    - 원본+복제= 총 두개씩의 저장소 연결
+  1. 기능 추가를 위해 branch 생성 및 기능 구현
+  2. 내 복제 원격 저장소에 branch  push
+  3. 원본 저장소에 pull request 요청
+  4. 복제 원격 저장소의 branch 삭제
+  5. 로컬 master branch로 이동
+  6. 원본 저장소 pull 해서 로컬 저장소 동기화.
+ 
+- **push 시**
+ ```bash
+ git push origin {branch}
+ ```
