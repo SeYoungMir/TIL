@@ -6,8 +6,19 @@
         - @classmethod  , 인스턴스를 만들지 않아도 호출 가능, 첫 인자가 클래스 객체
 -   static method (누적 공유) 
     -   선언과 동시에 주소가 생성되어 bind된다 (공유변수 or 누적값)
-        - static, class, struct, union, userFunction.
-
+        - static, class, struct, union, userFunction. 
+- 상속이라는 것은 선조와 후손의 관계를 통해 (super, self), 기능을 병합하며 확장하는 것을 말한다.
+- override(재정의)
+  - 손자와 선조가 동일한 메소드를 가지고 있으면서 선조가 가진 메소드를 후손이 재정의 하면서 기능을 내부 확장하는 것
+- 다형성(polymorphism)
+  - 상속관계의 동적 바인딩을 말한다.
+  - 다형성의 이유(목적) = 동적바인딩 
+- 동적 바인딩
+  - 상속관계의 객체를 메모리에 올려놓고 호출하는 것이(정적바인딩) 아닌 필요할 때마다 선조의 객체 주소를 통해 후손의 메소드를 실행하는 것을 말한다.
+  - 동적 바인딩의 특장점
+    - 코드 단일화 (코드가 간단함)
+    - 가독성
+    - 가성비
 - instance method (객체 단위 생성)
 ```python
 class M:
