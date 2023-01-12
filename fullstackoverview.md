@@ -40,6 +40,30 @@ Data vs Big Data
 
 - 저장 
   - RDBMS/NoSQL/클라우드 등
+- RDBMS 가장 많이 사용 (관계형, 중복을 없애기 위함) 테이블을 먼저 만들고 데이터베이스를 넣어야 함 (중요한 데이터를 저장, 개런티 X, 안정성X , 유지보수 내가 해야 함)
+  -  Oracle (유료)
+  -  MSSQL
+  -   SYBASE
+    -  DB2 금융 계열
+  -   SQLite
+  -   마리아DB MySQL과 같은 계열
+  -   Etc.
+-  NoSQL (날아가도 크게 문제없는 데이터, 안정성 떨어짐, 개런티 X, 오픈소스, 유지보수 해줌)
+     -  MongoDB (많이씀)
+     -   HBASE(하둡에서 쓰고 있는 데이터베이스)
+-   클라우드DB
+    -   Lct4
+    -   ReSt
+    -   JSON
+    -   etc
+-   만든 이유: 저장 & 검색
+-   단순 저장이 아니기에 검색을 위해 잘 저장해야 함
+Json은 {key:value}로 저장함
+SQL (Structured Query Language)
+-   데이터 처리 (RDBMS)
+-   DDL: create, drop alter
+-   DML: Select(검색) update(수정), delete(삭제), insert(삽입)
+-   DCL: Control Language (권한을 주고 뺏고), grant, revoke, deny
 - 
 - 처리 - 빅데이터
   - 전처리 (이미지, sns, ... 비정형 data > 수치화)
