@@ -36,7 +36,8 @@ Data vs Big Data
 - 기획
   - what(무엇을) how(어떻게) insight (활용+보정)
 - 수집  -(빅데이터,[R/python program 
-  - 수집 있다/없다 >내부/외부
+  - 수집 있다>내부/외부
+    - 없다 >데이터 수집
 
 - 저장 
   - RDBMS/NoSQL/클라우드 등
@@ -51,7 +52,7 @@ Data vs Big Data
 -  NoSQL (날아가도 크게 문제없는 데이터, 안정성 떨어짐, 개런티 X, 오픈소스, 유지보수 해줌)
      -  MongoDB (많이씀)
      -   HBASE(하둡에서 쓰고 있는 데이터베이스)
--   클라우드DB
+-   클라우드DB(AWS,Azure)
     -   Lct4
     -   ReSt
     -   JSON
@@ -104,6 +105,7 @@ SQL (Structured Query Language)
   - 보정
     - 날씨, 휴일, 축제, 졸업등의 요소들
     - 성능을 올리기 위해 요소를 보정, 추가
+    - 나중에 추가할때 어떻게 할지도 생각해봐야함
 
 
 각종 언어 ->  크롤링 + 스크래핑 (웹 크롤링)
