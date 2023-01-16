@@ -65,11 +65,12 @@
 
   - 테이블 태그의 속성
 
-|태그|속성|설명|
-|---|---|---|
-|table|border|표의 테두리 두께 지정|
-|th,td|colspan|셀의 너비 지정
-|    |rowspan|셀의 높이지정|
+<table>
+  <th>태그</th><th>속성</th><th>설명</th>
+  <tr><td>table</td><td>border</td><td>표의 테두리 두께 지정</td></tr>
+  <tr><td rowspan="2">th,td</td><td>colspan</td><td>셀의 너비 지정</td></tr>
+ <tr><td>rowspan</td><td>셀의 높이지정</td></tr>
+</table>
 - 미디어 태그
   - 이미지, 오디오, 비디오 등 멀티미디어를 넣을 때 사용
 - 미디어 태그 구분
