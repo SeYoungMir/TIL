@@ -23,7 +23,7 @@
 
     `<-리스폰스`
 
-`HTML 받아오기 / 필요한 data 추출(파싱 / File system folder 저장`
+`HTML 받아오기(렌더링)/ 필요한 data 추출(파싱 / File system folder 저장`
 
         `프론트 엔드 / 백엔드`
 
@@ -49,11 +49,12 @@ SNMP
 |API| | | | 
 
 #### 웹크롤링
-1. 대상 사이트 분석(HTML,CSS(디자인),Javascript(기능))
+1. 대상 사이트 분석(구성 파악)(HTML,CSS(디자인),Javascript(기능),구조)
 2. HTTP request (URL, ~~ ? g: ~~)
 3. HTTP response(HTML)
 4. HTML에 들어있는 필요한 데이터를 추출(찾아내기)
-5. 추출 data 저장,(DB, File system(폴더))
+5. 찾기 : 태그, 속성, CSS 등 (find, findall)
+6. 추출 data 저장,(DB, File system(폴더))
 
 - 대상 사이트 분석
   - HTML, CSS, JavaScript
