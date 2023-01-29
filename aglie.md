@@ -45,17 +45,75 @@
            - 스토리보드
            - IA(Information Architecture)
            - DB 테이블
-       - Temporary
+      - Temporary
          - Temporary(한시성)
            - 시작(Start)과 끝(Finish)이 존재
          - 프로젝트는 일의 시간적인 맺고 끊음을 분명히 하는 업무
+           - 목표의 달성 (ex: 웹사이트 개발)
+             - 이후 목표의 유지는 운영의 문제
+       - Uncertain
+         - Progressive Elaboration 
+           - 점진적 상세화 = 점진적 구체화
+             - 불확실성 완화를 위한 세밀한 기획(Dedicated Planning)은 점진적 상세화(Progressive Elaboration)를 통해서 가능해짐
+           - 표준 프로세스 = 반복(Iteration)
+             - <table><tr><th>분석</th><th>설계</th><th>개발</th><th>테스트</th><th>인도</th></tr><tr><td>요구사항 검증, 범위(기능과 사양)정의, 계획 수립, 인수 기준 정의</td><td>디자인</td><td>코딩,구현</td><td>시험, 검증, 검수, 검토, 확인, QC, 검사</td><td>릴리스(Relase)=컷 오버(Cut Over)= 출시(Launch)</td></tr></table>
+             - 프로젝트는 점차 정보의 양이 증가하고 정확한 산정치가 제시됨에 따라 계획의 정확도를 높여 나가는 반복적인 프로세스로 진행
+      - 프로젝트의 범위는 프로젝트 전 단계에 걸쳐 점진적으로 상세화
+        - 예측형 프로젝트의 점진적 상세화(Waterfall 형태)
+          - 프로젝트 착수 > 프로젝트 계획 > 요구 분석 > 설계(디자인) > 개발 > 테스트 > 운영과 유지 보수
+          - 상위 단계(Phase) > 하위 단계(Stage) > 프로세스(Process)
+        - 애자일 프로젝트의 점진적 상세화
+          - N차 증분(Increment)
+            - 각 증분 별 2주~2달
+              - 중요한 것부터 차례대로 진행
+            - 개발, 테스트, 계획, 요구 분석, 디자인의 종합
+              - 이를 여러번 반복
+          - 증분(Increment) > 반복(Iteration) > 에픽(Epic)>기능(Feature) > 사용자 스토리(User Story) > 작업(Task)
+      - 프로젝트의 범위는 프로젝트 전 단계에 걸쳐 점진적으로 상세화
+      - 프로젝트를 통해 산출할 수 있는 고유한 산출물
+        - 분석
+          - 사용자 요구사항 정의서
+          - 유스케이스 명세서
+          - 요구사항 추적표
+        - 설계
+          - 클래스 설계서
+          - 총괄시험 계획서
+          - 데이터베이스 설계써
+          - 단위시험 케이스
+          - 사용자 인터페이스 설계서
+          - 컴포넌트 설계서
+          - 아키텍처 설계서
+          - 시스템 시험 시나리오
+          - 엔터티 관계 모형 기술서
+          - 통합 시험 케이스
+          - 데이터 전환 및 초기 데이터 설계서
+        - 개발
+          - 프로그램 코드
+          - 단위 시험 결과서
+          - 데이터베이스 테이블
+        - 테스트
+          - 통합 시험 결과서
+          - 시스템 시험 결과서
+          - 사용자 지침서
+          - 운영자 지침서
+          - 시스템 설치 결과서
+          - 인수 시험 시나리오
+          - 인수 시험 결과서
+      - 프로젝트는 변화를 야기
+        - 프로젝트가 시작되기 전에 조직은 일반적으로 "현재 상태"(Current State)에 머물러 있는 것으로 간주됨
+        - 프로젝트에 의해 추진된 변화의 바람직한 결과를 "미래 상태"(Future State)라고 볼 수 있음
+      - 프로젝트는 가치를 창출
+        - 프로젝트는 비즈니스 가치를 창출하는 데 기여
+        - 편익은 유형 또는 무형이거나 두가지 모두에 해당 가능
+        - 비즈니스 가치에 대한 명확한 이해와 공감대 형성이 되지 않으면, 프로젝트는 갈등이 커지고 이로 인해 실패 우려
+
 3. 프로젝트(project)vs 운영(Operation)
 <table>
 <tr><th>
 프로젝트 업무(Project)</th><th>일반업무(Operation) = 운영</th></tr>
 <tr><td>목표의 달성(Achieving the goal)</td><td>사업의 유지(Sustaining the business)</td></tr>
-<tr><td>고유성(Unique)<br>>>고유한 목표 -> 산출물(Deliverable)</td><td>프로젝트 결과의 활용</td></tr>
-<tr><td>한시성(Temporary)<br>>>시작과 끝-> 분명한 마감일(Deadline)</td><td>일반 업무의 특징:상시성(On-going),<br>반복성(Repetitive)</td></tr>
+<tr><td>고유성(Unique)<br>>>고유한 목표 -> 산출물(Deliverable)<br>고유하거나 새로운 제품, 서비스,또는 결과</td><td>프로젝트 결과의 활용<br>표준 또는 동일한 제품 또는 서비스, 결과</td></tr>
+<tr><td>한시성(Temporary)<br>>>시작과 끝-> 분명한 마감일(Deadline)<br>착수(Initiate)<br> - 타당성 검토(Feasibility Study)<br> - 공식화(Authorize Project) <br> 종료(Close)<br>산출물 이관(Deliverable Transition)<br>팀원 발령 해제(Release Resource)</td><td>일반 업무의 특징:상시성(On-going),<br>반복성(Repetitive)<br>명확하지 않은 시작일과 종료일  </td></tr>
 <tr><td>불확실성(Uncertain)<br>>>단계(Process)제시<br>>>점진적 상세화(Progressive Elaboration)</td></tr>
 
 </table>
