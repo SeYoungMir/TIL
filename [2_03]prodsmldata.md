@@ -29,4 +29,42 @@
     - p를 무한대로 보내면 $exp(x+y)$
   - (0,0)에서 시작
   - $x=0, y'=1$
-  - 
+### 데이터 결합
+#### 데이터 결합
+
+
+<style>
+    .multi{column-count:2;
+         column-gap:10px;}
+</style>
+<div class="multi">
+<p><table>
+    <tr><th>X1</th><th>X2</th></tr>
+    <tr><td>A</td><td>1</td></tr>
+    <tr><td>B</td><td>2</td></tr>
+    <tr><td>C</td><td>3</td></tr>
+</table>
+</p>
+
+<p>
+<table>
+    <tr><th>X1</th><th>X3</th></tr>
+    <tr><td>A</td><td>T</td></tr>
+    <tr><td>B</td><td>F</td></tr>
+    <tr><td>D</td><td>T</td></tr>
+</table>
+</p></div>
+
+  - X1: 키(Key)변수
+- 이너조인 (inner join)
+  - 두 테이블에 키(key)가 공통으로 존재하는 레코드(record)만 결합
+  - (A,1,T),(B,2,F)
+- 풀아우터 조인(full outer join)
+  - 두 테이블 중 어느 한 쪽이라도 존재하는 키에 대한 레코드를 모두 결합
+  - (A,1,T),(B,2,F),(C,3,NA),(D,NA,T)
+- 레프트 조인(left join)
+  - 왼쪽 테이블에 존재하는 키에 대한 레코드를 결합
+  - (A,1,T),(B,2,F),(C,3,NA)
+- 라이트 조인(right join)
+  - A,1,T),(B,2,F),(D,NA,T)
+  
