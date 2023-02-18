@@ -34,3 +34,9 @@
   - 차원축소(dimension reduction)
     - 특성변수들만 모아서 차원축소
     - 특성변수들이 많을때, 가장 잘 표현하는 특성변수를 선택.
+- 강화학습 (Reinforcement Learning)
+  - 행동하는 주체(agent)가 있고 행동을 했을 때의 상태(state)와 보상(reward)을 바꿔주는 환경(environment)로 구성됨
+  - 주체가 매번 어떠한 행동(action)을 하면 환경에 의해 상태와 보상이 바뀌면서 주체는 보상이 가장 커지는 방향으로 계속 학습해 나가게 됨.
+  - 대표 알고리즘
+    - SARSA,Q-Learning
+    - 
