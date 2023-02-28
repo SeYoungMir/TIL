@@ -738,8 +738,8 @@ RDBMS와 NoSQL
     - 화면 출력 : Print()
     - 저장 : Save()
 ## 빠른 데이터 분석을 위한 Spark
-### Spark의 이해
-#### Spark 개요
+### Spark의 이해 
+#### Spark 개요(RDD)
 - 하둡 MapReduce 보다 발전된 새로운 분산병렬처리 Framework
   - 저장소는 로컬파일시스템, 하둡 HDFS, NoSQL(Hbase, Redis), RDBMS(오라클,MSSQL)
   - Spark는 분산병렬처리 엔진
