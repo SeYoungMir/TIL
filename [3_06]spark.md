@@ -120,7 +120,7 @@ Negotiator) 클러스터, 아파치 메소스(Mesos) 클러스터 등 다양한 
 - 정형 스트리밍 API를 새롭게 도입해 마치 일괄 처리 프로그램을 구현하는
 것처럼 스트리밍 프로그램을 구현
 ##### 스파크 MLlib
--스파크 MLUb는 UC 버클리의 MLbase 프로젝트에서 개발한 머신 러닝 알고리즘 라이브
+- 스파크 MLUb는 UC 버클리의 MLbase 프로젝트에서 개발한 머신 러닝 알고리즘 라이브
 러리
 - 스파크 MLlib는 로지스틱 회귀(logistic regression), 나이브 베이즈 분류(naive Bayes classification), 서포트 벡터 머신(Support Vector Machine, SVM), 의사 결정 트리(decision tree), 랜덤 포레스트 (random forests), 선형 회귀(linear regression), k_평균 군집화(k-means clustering) 등 다양한 머신 러닝 알고리즘을 지원
 - 스파크 MLlib를 사용해 RDD 또는 DataFrame의 데이터셋을 변환하는 머신 러닝 모델을
