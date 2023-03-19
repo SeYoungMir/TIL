@@ -27,7 +27,7 @@
   - 관심 모수가 $\mu$이고 검정하고자 하는 모수의 경계값이 $\mu_0$라고 할 때,
 
 <table>
-    <tr><th colspan=2>단축(한쪽 꼬리)검정</th><th rowspan=2>양측(양측 꼬리) 검정</th>
+    <tr><th colspan=2>단측(한쪽 꼬리)검정</th><th rowspan=2>양측(양측 꼬리) 검정</th>
     </tr>
     <tr>
         <th>왼 꼬리 검정</th><th>오른 꼬리 검정</th>
