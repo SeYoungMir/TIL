@@ -30,3 +30,16 @@
   - 유의수준 (significance level) 100 $\alpha\%$검정법
     - 자료로부터 계산된 유의확률(p-value)이 주어진 유의수준$\alpha$보다 작은 경우에 귀무가설 $H_0$를 기각함
     - p-value$\leq \alpha$면 $H_0$을 기각
+
+### 여러 모집단의 모분산 비교
+- Bartlett 검정과 Levene 검정
+  - $k(\geq 2)$개의 모집단에 대한 등분산 검정
+  - 가설
+    - $H_0:\sigma_1^2=\cdots=\sigma_k^2$
+    - $H_1:$적어도 하나 이상의 $\sigma_i^2$는 나머지와 다르다.
+  - Bartlett 검정
+    - 모집단이 모두 정규분포를 따르는 경우 적용함.
+    - $k=2$인 경우 등분산 F검정,$k>3$인 경우는 Bartlett의 검정
+  - Levene 검정
+    - 모집단에 대한 정규성 가정이 필요하지 않음.
+    - 
