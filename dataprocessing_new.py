@@ -7,10 +7,10 @@ Created on Fri Apr 14 19:34:04 2023
 
 import pandas as pd
 from pandas.io.json import json_normalize
-uniqin=pd.read_csv('F:\\Ndjango\\branch_test\\uniqingred.csv',header=None)
+uniqin=pd.read_csv('F:\\')
 uniqin[0].values
 uniqin_list=uniqin[0].values.tolist()
-enrecipe=pd.read_csv('F:\\Ndjango\\branch_test\\archive\\recipeenglish.csv')
+enrecipe=pd.read_csv('F:\\')
 enrecipe.columns
 #enrecipe=enrecipe.drop(columns='Ingredients',axis=1)
 Instructions=enrecipe['Instructions'].astype(str)
