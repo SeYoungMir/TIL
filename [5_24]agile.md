@@ -68,7 +68,7 @@
   - 반복 기반(Iteration-Based)애자일 라이프 사이클
   - Iteration-Based Agile 라이프 사이클은 표준 프로세스를 주기적인 Time Box 내에서 진행하는 것을 의미함
   - Increment(또는 Sprint)목표를 제시하고, 각 Increment 내에서 표준 프로세스 계획을 수집함
-    - 표준 프로세스 $rarr$ 요구사항, 분석, 설계, 구축, 테스트
+    - 표준 프로세스 $\rarr$ 요구사항, 분석, 설계, 구축, 테스트
     - Time Box, 즉 보고 주기를 2주로 하기로 했다면, Time Box 마지막 시점에 중간 산출물을 인도하는 것을 원칙으로 함
   - 플로우 기반(Flow-Based)애자일 라이프 사이클
     - Flow-Based Agile 라이프 사이클은 요구 사항에 따라서 Time Box를 각각 다르게 설정함
@@ -78,7 +78,7 @@
         - 진행 중인 작업의 개수를 제한하는 것, 할 수 있는 작업의 최대 개수
         - 우선 순위가 높은 작업들을 먼저 Task Board(Kanban)에 등록함
         - WIP Limit 개수를 넘어서면 해당 워크플로우에 작업을 추가할 수 없음
-        - WIP Limit의 목적 $rarr$ Multi-tasking 지양
+        - WIP Limit의 목적 $\rarr$ Multi-tasking 지양
         -  WIP Limit의 예
            - Ready의 WIP Limit:8개
            - Development and unit test의 WIP Limit : 3개
