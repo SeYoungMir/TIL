@@ -36,6 +36,7 @@
    - JSON은 배열을 사용할 수 있음 $\rarr$ 배열과 객체를 하나의 데이터에 적용한 포맷
 
 ### XML vs JSON 비교
+```
 //XML
 <people>
     <person>
@@ -47,3 +48,4 @@
     "people":[ {"firstName":"길동","lastName":"홍"}
     ]
 }
+```
