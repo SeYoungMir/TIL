@@ -30,5 +30,5 @@
 ### ApiServelet.java
 - response.sendRedirect("dataList.jsp");
 ### dataList.jsp
-  - <script src="./js/data.js"></script>
+  - `<script src="./js/data.js"></script>`
   - WebContent 밑에 js폴더 - data.js 파일 생성
