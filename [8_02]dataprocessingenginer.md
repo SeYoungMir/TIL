@@ -113,5 +113,5 @@
    - DB Connection
      - Data Transfer(Procedure,Job)
    - 수신 시스템
-     - Choose Data & USE
+     - Choose Data & Use
        - 송신 인터페이스 테이블
