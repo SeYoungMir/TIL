@@ -1,0 +1,42 @@
+# 4. 빅데이터 적재 I - 대용량 로그 파일 적재
+## 2. 빅데이터 적재에 활용하는 기술
+### 2. 하둡 아키텍쳐
+- 하둡의 아키텍처는 1.x 버전에서 2.x 버전으로 넘어오면서 변화와 혁신 가져옴
+- 3.x 릴리즈 이후 큰 변화를 예고 중
+- 하둡 1.x 아키텍처
+  - 클라이언트
+    - NameNode
+      - Secondary NameNode
+    - JobTracker
+    - HDFS
+      - DataNode 여러개 > JobTracker와 NameNode로 연결
+        - TaskTracker
+        - 맵 리듀스
+  - 클라이언트에서 하둡에 읽기/쓰기를 할 때는 NameNode를 참조, 파일을 읽기/쓰기할 DataNode 정보를 전달
+  - 클라이언트는 해당 정보를 이용해 DataNode에 직접 연결, 파일을 읽기/쓰기
+  - 하둡에 적재된 데이터를 분석해야 할 때는 클라이언트가 JobTracker에게 맵 리듀스 실행을 요청, JobTraker가 스케줄링 정책에 따라 작업할 DataNode/TaskTracker를 선정
+  - 선정된 TaskTracker에 맵리듀스 프로그램이 전달, 저장된 파일들을 이용해 맵 리듀스 작업들이 실행
+  - 1.x 아키텍처의 문제점
+    - NameNode의 이중화 기능 미지원. SPOF(Single Point Of Failure, 단일 장애 접점)이 존재함.
+      - 하둡의 파일을 적재/관리하기 위해서는 NameNode를 참조, NameNode에 문제가 발생하면 하둡 클러스터 전체에 장애 발생
+      - 이를 보완하기 위해 NameNode에 추가적인 HA 작업 필요, 그로 인한 관리의 복잡성과 비용 증가
+      - 분산 병렬처리를 위한 맵리듀스 실행 시 잡 스케줄링과 리소스 배분 정책이 비효율적, 병목 자주 발생, 개선점 필요
+- 하둡 2.x 아키텍처
+  - 클라이언트
+    - NameNode(Active)
+      - JournalNode
+      - NameNode(Standby)
+      - 주키퍼
+    - Resource Manager
+    - HDFS
+      - DataNode 여러개 > NameNode(Active)와 Resource Manager에 연결
+        - Node Manager
+          - Container
+          - Application Master
+  - 1.x의 문제점을 개선하기 위한 다양한 컴포넌트가 교체 및 추가
+    - 먼저 클라이언트가 DataNode로부터 파일을 읽고 쓰기 전에 NameNode를 참조할 때, 1.x와 다르게 Active/Standby로 이중화되어 있음
+    - NameNode의 메모리에서 관리되는 파일들의 네임스페이스 정보를 주기적으로 관리하기 위해 JournalNode 추가, 주키퍼 사용
+    - 가장 큰 변화는 1.x의 맵 리듀스 처리때 사용하던 JobTracker와 TaskTracker대신 Resource Manager, Node Manager가 생김
+      - Resource Manager는 Node Manager의 리소스 현황들을 종합적으로 수집, 작업 실행을 위한 최적의 DataNode를 찾아 효율적 잡 스케줄링 가능, DataNode의 리소스 불균형 현상 문제 해결
+      - NodeManager의 Container,Application Master 는 기존 1.x의  맵 리듀스 잡 외에도 다양한 애플리케이션을 하둡의 DataNode에서 실행 및 관리할수 있게 확장
+      - 이렇게 변화된 하둡 2.x 플랫폼을 YARN(Yet Another Resource Negotiator)라고 하며 하둡 생태계에 큰 변화
