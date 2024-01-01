@@ -1,0 +1,50 @@
+# 7. 빅데이터 분석
+## 2. 빅데이터 분석에 활용되는 기술
+### 2. 제플린 - 이어서
+- 제플린 아키텍처
+  - 제플린을 이용하면 웹 UI의 NoteBook에서 스파크 또는 스파크 SQL을 작성해 하둡 클러스터에 작업을 요청하고 , 처리 결과를 다시 웹 UI에서 시각화해서 볼 수 있음
+  - 이 때 제플린의 클라이언트와 서버 사이에 REST 또는 웹소켓 통신을 요청하게 되며, 요청된 결과에 해당하는 인터프리터가 작동해서 타깃 시스템에 작업을 요청하게 됨
+  - 제플린은 스파크 뿐만 아니라 다양한 확장 인터프리터(스파크,하이브,플링크(Flink),R,카산드라 등)를 제공함
+- 제플린 구조
+  - Zeppelin Web Client
+    - NoteBook
+    - Visualization
+  - Request
+    - Http REST
+    - Websocket
+  - JVM
+    - Zeppelin Server
+      - Zeppelin Engine
+        - Interpreter Factory
+  - Interpreter
+    - JVM
+      - Spark Interpreter
+    - JVM
+      - Hive Interpreter
+    - JVM
+      - Cassandra Interpreter
+- 제플린 활용 방안
+  - 6장 데이터 탐색을 통해 만든 5개의 마트 데이터를 대상으로 제플린에서 스파크 SQL을 이용해 다양한 애드혹 분석을 수행
+  - 우선 스파크 SQL을 이용해 5개의 주제 영역별 마트 데이터에 접근해 데이터를 추출, 처리, 분석하고 그 결과를 제플린의 시각화 기능을 이용해 다양하게 분석
+  - 또한 스파크 ML을 이용해 머신 러닝의 분류와 군집으로 스마트카의 이상징후 예측과 고객의 성향분석 작업도 진행함
+  - 제플린 활용 방안 구조
+    - 스마트카 데이터셋 - Managed 영역
+      - 데이터
+        - 스마트카 상태 정보
+        - 이상 운행 패턴 정보
+        - 운전자 운행 정보
+        - 차량용품 구매이력 정보
+        - 긴급 점검 필요 차량 정보
+      - 분석
+        - Spark Engine을 이용, 대용량 데이터를 빠르게 Ad-Hoc 분석
+        - 처리된 결과를 시각화(Table,Line,Pie Chart 등)해서 분석
+    - Zeppelin Server
+      - Spark SQL
+      - Spark ML
+    - 머신러닝
+      - ML
+        - Classification(분류)
+        - Clustering(군집)
+      - 분석
+        - 스마트카 이상 징후 분류 및 예측 분석
+        - 스마트카 고객의 군집 및 성향 분석
