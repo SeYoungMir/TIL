@@ -50,6 +50,6 @@
      - callback에는 추출한 결과를 처리할 함수 이름을 지정
      - follow에는 추출한 결과에서 또 어떤 링크를 따라 돌지를 지정
    - LinkExtractor에서 지정한 조건을 기반으로 변수 starts_urls에 설정한 페이지부터 크롤링을 시작하며 HTML을 추출하게 됨
-   - 추출한 HTML은 Rule(callvack=...)에 지정한 함수에 전달. 현재 예제에서는 callback에 parse_start_url 메서드를 지정
+   - 추출한 HTML은 Rule(callback=...)에 지정한 함수에 전달. 현재 예제에서는 callback에 parse_start_url 메서드를 지정
    - parse_start_url은 CrawlSpider의 메서드. 이를 오버라이드 해서 parse_item 메서드를 호출 시 최상위 페이지의 처리를 진행
    - Scrapy는 start_urls를 사용해서 지정한 URL을 '계층적인 크롤링 대상 링크가 있는 인덱스 페이지'로 생각. 따라서 Rule(callback=...)에 Item 처리 전용 메서드를 지정했다고 해도 메인(최상위 페이지)는 스크레이핑되지 않음.
