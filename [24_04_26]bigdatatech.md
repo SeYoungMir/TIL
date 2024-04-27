@@ -19,7 +19,7 @@
         ```
   - /films?page=2처럼 URL 매개 변수로 page를 지정할 수 있게 URL 매개 변수를 파싱하는 reqparse.RequestParser 함수를 호출
   - self.parser.add_argument 메서드를 사용해서 파싱 대상 URL 매개 변수인 page를 지정, page 매개 변수는 숫자로 다룰 것이므로 type=int 라고 지정
-  - page 매개 변수가 없을 때는 page=1을 지젖ㅇ했을 때와 똑같이 동작하도록 기본값 default=1을 지정, 마지막으로 super().`__init__` 메서드는 부모 클래스인 Resource의 `__init__` 메서드를 호출하는 것. 꼭 작성해야 하는 코드임.
+  - page 매개 변수가 없을 때는 page=1을 지정했을 때와 똑같이 동작하도록 기본값 default=1을 지정, 마지막으로 super().`__init__` 메서드는 부모 클래스인 Resource의 `__init__` 메서드를 호출하는 것. 꼭 작성해야 하는 코드임.
   - 이때 매개변수 args를 *args, 키워드 매개변수 kwargs를 **kwargs로 언팩해서 전달
     - 변수 언팩
       - 변수 args에 (1,2,3)이라는 튜플 형식의 값이 들어있을 때, func 함수에 func(*args)라는 형태로 전달하면 func(1,2,3)형태로 실행했을 때처럼 처리(args 변수의 값이 전개되어 전달)
@@ -42,3 +42,6 @@
         squares =[i*2 for i in [1.2.3]]
         ```
       - 기본적인 형식은 <리스트의 최종 요소> for <반복변수> in <리스트>
+      - api.add_resource 부분은 FilmItem 클래스를 /film/(film_id)와 연결
+      - (film_id) 부분을 `<int:film_id>`로 작성하면 film_id가 int 자료형의 변수로 전달, 이 코드로 인해 예를 들어 /film/10이라는 URL 경로로 접근하면 film_id에 10이 전달
+      - apo.add_resource 메서드를 사용, FilmList 클래스를 /film/과 여결. 이 때는 page 등의 URL 매개 변수를 따로 지정하지 않아도 됨.
