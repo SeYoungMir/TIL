@@ -12,4 +12,4 @@
   - 팀 생성 후 [URL] https://my.slack.com/services/new/incoming-webhook/ 에 들어감. 로그인 요구 시 로그인. 여러 개의 팀에 소속되어 있다면 통지에 사용할 팀 선택
   - 슬랙 채널 새로 만들기
     - [URL] https://<생성 workspace 이름>.slack.com에 들어가서 로그인, 로그인 시 왼쪽 네비게이션 메뉴에서 Channels 오른쪽에 [+](플러스 아이콘)이 보임. 이를 클릭해서 새로운 채널 생성 가능.
-    - 'Name에 채널 이름(ex:pythoncrawler)을 입력, [Create Channel] 버ㄷㅡㄴ을 클릭 시 채널 생성.
+    - 'Name에 채널 이름(ex:pythoncrawler)을 입력, [Create Channel] 버튼을 클릭 시 채널 생성.
