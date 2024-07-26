@@ -23,4 +23,7 @@
      killasgroup=false
      user= username
      stdout_logfile=/Users/username/python/crawler_with_celery_sample/booker_download_stdout.log
+     stderr_logfile=//Users/username/python/crawler_with_celery_sample/booker_download_stderr.log
+     environment=PATH="/Users/username/python/crawler_with_celery_sample/venv_crawlerwith_celery_sample/bin:/usr/local/bin:%(ENV_PATH)s"
      ```
+   
