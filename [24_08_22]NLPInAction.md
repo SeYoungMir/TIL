@@ -14,7 +14,7 @@
 - 정규 표현식에서 대괄호는 부합 가능한 문자들의 종류를 뜻하는 문자 부류(character class)를 지정하는데 사용. 문자 부류를 지정할 때 모든 문자를 일일히 나열할 필요 없이 대시(-)로 문자들의 범위를 지정할 수 있음. 앞의 예에서 "[a-z]"는 "a"에서 "z"까지 모든 영문 소문자와 부합. 그리고 문자 부류 다음의 별표('*')는 그 문자 부류에 속하는 문자가 임의의 횟수로 나타날 수 있음을 뜻함.
 - 더 많은 인사말과 부합하도록 정규표현식 확장
 - ```python
-  r = r'[^a-z]*([y]o|[h']?ello|ok|hey|(good[ ])?(morn[gin']{0,3}|'\r'afternoon|even[hin']{0,3}))[\s,;:]{1,3}(a-z){1,20})'
+  r = r'[^a-z]*([y]o|[h']?ello|ok|hey|(good[ ])?(morn[gin']{0,3}|'\r'afternoon|even[gin']{0,3}))[\s,;:]{1,3}([a-z]{1,20})'
   re_greeting = re.compile(r,flags=re.IGNORECASE)
   # 위처럼 compile 메서드로 정규 표현식을 미리 컴파일 해 두면 정규식을 적용할 때마다 옵션(flags)들을 지정할 필요가 없음
   re_greeting.match('Hello Rosa')
