@@ -30,7 +30,7 @@
     model_name= "domain_specific_word2vec_model"
     model.save(model_name)
     ```
-- 다음은 저장한 단어 벡터 뫃령을 적재해서 사용하는 예시 코드. 
+- 다음은 저장한 단어 벡터 모형을 적재해서 사용하는 예시 코드. 
   - ```python
     from gensim.models.word2vec import Word2Vec
     model_name="domain_specific_word2vec_model"
